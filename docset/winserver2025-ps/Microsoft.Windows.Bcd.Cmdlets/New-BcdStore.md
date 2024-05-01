@@ -10,25 +10,26 @@ title: New-BcdStore
 # New-BcdStore
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Creates a empty boot configuration data store. The created store is not a system store.  Similer to bcdedit /createstore
 
 ## SYNTAX
 
 ```
+### NormalMode (Default)
 New-BcdStore [-Path] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Creates a empty boot configuration data store and saves it in the path specified. BCD entries can be added to the store by using the New-Bcdentry command.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\WINDOWS\system32> New-BcdStore -Path C:\temp\bcd
 ```
 
-{{ Add example description here }}
+This creates a empty boot configuration data store and saves it in the path specified. 
 
 ## PARAMETERS
 
@@ -48,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-{{ Fill Path Description }}
+Path the BCD file is saved to. 
 
 ```yaml
 Type: System.String
